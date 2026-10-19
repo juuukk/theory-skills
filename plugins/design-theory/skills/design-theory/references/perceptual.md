@@ -127,6 +127,50 @@ If a single typeface has sufficient range (multiple weights, optical sizes), use
 - Are all text elements legible against their backgrounds?
 - Do the typefaces have clear, differentiated roles?
 
+## Vision and light
+
+### Why it matters
+Colour theory assumes a lit room and a rested eye. At night neither holds. The eye switches from cones (photopic) to rods (scotopic), and light also acts on the body clock through a third receptor that has nothing to do with seeing. A screen designed for day can wake someone up, ruin their night vision, or keep them from sleeping.
+
+### Night vision (scotopic and mesopic vision)
+- Rods do the seeing in the dark. They peak near 507 nm and are nearly blind to long-wavelength red (the Purkinje shift).
+- Full dark adaptation takes 20–30 minutes. One look at white or blue light resets most of it.
+- Dim red light keeps it. That is why cockpits, submarines, darkrooms and astronomers use red, and why some watches ship a red-shift night mode.
+- In the dark, colour discrimination and fine detail drop. Use large, simple shapes and few colours.
+
+### Light and the body clock (non-visual effects)
+- Melanopsin cells (ipRGCs) peak near 480 nm. They tell the body clock it is day (Brainard 2001; Lucas et al. 2014). The CIE measures this as melanopic EDI (CIE S 026:2018).
+- Blue-rich light at night holds back melatonin and delays sleep. Dim, long-wavelength (red or amber) light does so least. Intensity matters as much as colour: the dimmest readable level is the target.
+- In the other direction, bright, cool light in the morning helps waking and anchors the clock. A wake-up screen or alarm may be bright on purpose.
+
+### Colour vision
+- About 8% of men and 0.5% of women of Northern European descent have a colour-vision deficiency. Most of them are red-green: deutan (most common) or protan.
+- Protans see long-wavelength red as darker. A red-on-black night screen therefore loses contrast for them, so make the red bright enough and test it.
+- Simulate deficiencies (Brettel, Viénot & Mollon 1997; Machado et al. 2009), and carry meaning in luminance, shape or label, never in hue alone.
+
+### Acuity, contrast sensitivity and age
+- Legibility depends on visual angle, which is size relative to viewing distance. A watch at 30 cm, a phone at 35 cm and a sign at 10 m need very different sizes. As a rule of thumb, body text needs about 0.2° or more of x-height, and more for glanceable or moving use (Legge & Bigelow 2011).
+- From about 45, near focus fails (presbyopia). Older eyes also let in much less light and scatter more glare (Owsley 2011). Thin weights and light-grey text fail them first.
+
+### Daylight and glare
+- In sunlight, screen reflections lower the effective contrast far below what was designed. Disability glare (veiling light) erases detail, and discomfort glare makes people look away.
+- Outdoors, on signage and on wearables, aim well above the minimum contrast. Prefer solid, heavy shapes and allow a high-brightness mode. Perceptual contrast measures such as APCA model this better than a static ratio.
+
+### Brightness in context
+- Perceived brightness is relative to adaptation. A screen that reads well in daylight glares in a dark bedroom.
+- Dark mode is not night mode. White text on black still emits short-wavelength light. A night surface is dim and warm, not just inverted.
+
+### Audit questions
+- Will this be looked at in the dark, at night, or by someone trying to sleep?
+- Is the night surface dim and long-wavelength (red or amber on black), with no white or blue blocks?
+- Does anything flash full-brightness white at night: a splash screen, a dialog, a system picker?
+- Is the wake-up moment the one place that is bright on purpose?
+- Does it still read under deutan and protan simulation, and in grayscale?
+- Is text sized by visual angle for the real viewing distance, and readable by a 60-year-old?
+- Does it hold up in direct sunlight?
+
+---
+
 ## Brand adherence
 
 ### Why it matters

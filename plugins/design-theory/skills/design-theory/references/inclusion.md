@@ -88,6 +88,9 @@ The design can be used efficiently and comfortably and with minimum fatigue. All
 **7. Size and space for approach and use**
 Appropriate size and space is provided for approach, reach, manipulation, and use regardless of user's body size, posture, or mobility. In digital: target sizes, spacing between interactive elements, layout that accommodates zoom and reflow. Example: sufficient tap target size and spacing on mobile.
 
+### Situational impairment
+Ability changes with context: one hand on a rail, walking, gloves, cold fingers, glare, noise, a second language, a moment of panic. Wobbrock et al. (2011, "Ability-Based Design") and Sears et al. (2003, "situationally-induced impairments") reframe accessibility as fitting the system to the ability people have in that moment. Audit: name the situations of use, then check that the critical path works one-handed, without sound, in glare, and without precise motor control.
+
 ### Universal Design vs. WCAG
 These are complementary, not competing:
 - WCAG: "Does this meet the threshold?" — compliance and audit

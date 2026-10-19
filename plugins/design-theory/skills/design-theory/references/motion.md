@@ -103,3 +103,6 @@ Use the platform's motion system as a foundation:
 
 **Motion performance**
 Only animate properties that the compositor can handle without triggering layout: `transform` (translate, scale, rotate) and `opacity`. Never animate `width`, `height`, `top`, `left`, `margin`, `padding` — these cause layout recalculation and produce janky animation regardless of the easing.
+
+**Vestibular safety**
+`prefers-reduced-motion` is the floor, not the whole rule. Motion that fills the visual field (parallax, large zoom, full-screen slides, scroll-jacking) conflicts with the inner ear. This causes dizziness and nausea for people with vestibular disorders. It does the same for anyone in a moving vehicle or in VR: the sensory-conflict theory (Reason & Brand 1975); cybersickness (Rebenitsch & Owen 2016). Keep motion small, tied to the user's own input and stoppable (WCAG 2.3.3).

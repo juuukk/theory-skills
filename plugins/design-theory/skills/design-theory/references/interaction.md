@@ -135,6 +135,14 @@ The user's mental model of how the system works. The design's job is to communic
 
 ---
 
+### Error types (Reason, *Human Error*, 1990; Norman, DOET ch. 5)
+- **Slips:** the goal is right but the action goes wrong (a mis-tap, a mode error). Cure them with constraints, larger and more separated targets, undo, and no hidden modes.
+- **Lapses:** a step is forgotten, often after an interruption. Cure them with reminders, forcing functions and visible state.
+- **Mistakes:** the goal or the rule is wrong because the model is wrong. Cure them with a better conceptual model, feedback and previews of consequences.
+- Audit: which error type does each failure path invite, and is its cure the matching one?
+
+---
+
 ## Cognitive Load Theory
 
 ### Why it matters
@@ -164,3 +172,15 @@ The effort a user spends building mental models and schemas — actually learnin
 - What extraneous complexity has design introduced that could be eliminated?
 - Are patterns consistent enough that users can build a mental model that generalizes?
 - How many active decisions is the user being asked to make simultaneously?
+
+### User state: stress, fatigue and divided attention
+- Capacity depends on the user's state. Stress narrows attention to the most salient cue (Easterbrook 1959). Fatigue and sleep loss slow responses and multiply lapses (Hancock & Desmond 2001).
+- Tasks on different channels (eyes, ears, hands, voice) interfere less with each other than tasks on the same channel (Wickens' multiple resources). A walking user has spare hearing, but little spare vision.
+- NASA-TLX (Hart & Staveland 1988) measures workload when it needs measuring.
+- Audit: in its worst realistic state (tired, stressed, interrupted), can the user still complete the critical path?
+
+### Attention and vigilance
+- Vigilance decrement: people miss rare signals during long monitoring (Mackworth 1948).
+- Alarm fatigue: alerts that fire often or falsely are habituated and ignored. Each false alert lowers trust in the true ones.
+- Interruptions cost resumption time, and people forget their goal (Altmann & Trafton 2002). Show where the user was.
+- Audit: is every alert rare, specific and actionable? Can the user pick up where they were after an interruption?

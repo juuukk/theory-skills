@@ -62,3 +62,27 @@ Audio notifications compete with keynote sounds for attention and fight with sou
 - Reduced listening: attending to sound as object (timbre, texture, pitch) without source or meaning
 
 Different app sounds invoke different listening modes. A voice notification requires semantic listening (attention cost). A subtle haptic pattern can be processed causally or reduced (lower cost).
+
+---
+
+## Body and Environment
+
+### Touch and haptics
+- Skin is most sensitive to vibration around 200–300 Hz (Pacinian corpuscles). Movement, clothing and a loose strap mask it.
+- Tactons (Brewster & Brown 2004) carry meaning through rhythm and duration, not intensity alone. People can tell only a few patterns apart, so keep the set small.
+
+### Hearing
+- Background noise masks sound, and a signal needs a clear margin above it to be heard. Hearing for high frequencies falls with age (presbycusis), so do not carry key alerts only in high tones (Moore, *An Introduction to the Psychology of Hearing*).
+
+### Physical environment
+- Cold lowers dexterity and touch-screen accuracy, and gloves block capacitive touch. Vibration from a vehicle or bike ruins small targets. Heat and sweat cause false touches.
+- Design for the environment of use: physical buttons over touch where cold, wet or moving, and larger targets where vibrating.
+
+### Body size and reach
+- Size physical products, venues and wearables from the 5th-percentile woman to the 95th-percentile man (Pheasant & Haslegrave, *Bodyspace*).
+- About half of phone use is one-handed (Hoober 2013). Put frequent actions within thumb reach.
+
+### Audit questions
+- Which senses are free at the moment of use, and how strong is each signal relative to the noise?
+- Does the design work cold, wet, gloved, moving and one-handed, where that is the real context?
+- Does the physical sizing cover the 5th to 95th percentile?

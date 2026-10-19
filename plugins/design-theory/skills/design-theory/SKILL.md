@@ -15,6 +15,25 @@ This skill supplies rationale and audit criteria — not execution technique. Be
 
 **Every task:** Mentally scan the 16 framework clusters. Apply those with meaningful signal — a finding, a risk, a constraint, a strength. Skip those that add nothing. Never force-fit for completeness.
 
+**Context and body first:** before picking clusters, name where, when and in what state the thing is used. The canon clusters below assume a rested user at a lit desk; this step catches the cases where that is wrong. Write it once per project as a **context map** in the intent or spec (template: `references/research.md § Context map`):
+- **Empathy map:** what the user says, thinks, does and feels at the moment of use.
+- **Who and in what state:** age and senses, rested or tired, calm or stressed, alone or with others.
+- **3–5 moments of use**, at least one an edge moment: 3 a.m., direct sun, walking or in a vehicle, gloves or one hand, interrupted, first use, low battery or offline.
+
+Then look each moment up and apply what it pulls in:
+
+| The moment has | Apply |
+|---|---|
+| dark, night, bright sun, glare, small text | Perceptual: Vision & light (night vision, colour vision, acuity and age, glare) |
+| one hand, gloves, cold, moving, imprecise touch | Inclusion: Situational impairment; Laws of UX: Fitts |
+| tired, stressed, rushed, half awake, interrupted | Cognitive Load: User state, Attention; Norman: error types |
+| a time of day, sleep, waking, routines | Symbolic: Body time |
+| noise, silence needed, vibration, haptics, posture, reach | Spatial: Body and environment |
+| first use, a rare task | Nielsen 6 and 10; Norman: signifiers |
+| offline, low battery, a slow or failing service | code-theory reliability (the judge reads the same map) |
+
+A context map is a scored check (CTX-MAP, CTX-COVERAGE): an audit with no map, or with a mapped moment no finding speaks to, fails it.
+
 **Quick tasks (CSS, copy, a single decision):** Weave 1–3 relevant principles into the response as inline rationale. Don't announce a review; just let the principles inform what you say.
 
 **Explicit audits:** Structure output by framework — findings, priority (HIGH / MED / LOW), recommendations. Read the relevant reference file before responding.
@@ -67,6 +86,15 @@ Brand essentials (Brand Sprint):
 - Rhythm: consistent baseline grid; line height ~1.4–1.6 for body
 - Max 2 typefaces: clear role distinction between them (display vs. text)
 
+**Vision & light** — Use when: anything looked at in the dark or at night (in bed, in a car, a cinema, outdoors after dusk), dark modes, very dim or very bright surroundings
+- Night vision: in the dark the rods take over, and they are nearly blind to red (Purkinje shift). Dim red keeps dark adaptation; white or blue light resets it for 20–30 minutes
+- Light sets the body clock: blue-rich light (~480 nm, melanopsin) at night holds back melatonin and delays sleep; dim, long-wavelength light does so least
+- Brightness is relative to the room: a screen that reads well by day glares in a dark bedroom. Dim it and warm it; inverting to white-on-black is not enough
+- Waking is the exception: bright, cool light helps waking, so a wake-up surface may be bright on purpose
+- Colour vision differs: about 8% of men have a colour-vision deficiency, mostly red-green. Protans see red as darker, so red text on black loses contrast for them. Check under simulation, and let luminance carry the meaning
+- Acuity and age: what is legible depends on visual angle (size ÷ viewing distance), not pixels. From about 45, near focus fails, and older eyes need much more light and contrast
+- Daylight and glare: sun washes out screens and signs. Outdoors, raise luminance contrast well above the indoor floor and avoid thin, light-grey type
+
 ---
 
 ### Interaction heuristics
@@ -105,6 +133,7 @@ Use when: controls, interaction patterns, mental models
 - **Mappings:** does the relationship between control and outcome feel natural?
 - **Feedback:** does the user know the result of their action, immediately?
 - **Conceptual model:** does the user's mental model match how the system actually works?
+- **Error types (Reason):** slips (right goal, wrong action), lapses (a forgotten step) and mistakes (wrong goal) need different cures: constraints and undo for slips, reminders and forcing functions for lapses, a better conceptual model for mistakes
 
 ---
 
@@ -114,6 +143,8 @@ Use when: information-dense UI, onboarding, complex flows
 - **Extraneous load:** unnecessary complexity from poor design — eliminate it
 - **Germane load:** effort spent building mental models — support it
 - Warning signs: too many simultaneous choices, no chunking, no progressive disclosure, forced memorization across steps
+- **User state:** capacity is not fixed. Stress narrows attention (tunnel vision), and fatigue and sleep loss slow reactions and cause lapses. Divided attention (walking, driving, a second task) leaves only spare capacity. Design the critical path for the worst state it will meet
+- **Attention and vigilance:** alerts that fire often get ignored (alarm fatigue); people miss rare signals during long monitoring; every interruption costs time to resume. Make alerts rare, specific and actionable
 
 ---
 
@@ -141,6 +172,8 @@ Use when: accessibility, inclusive design, adversarial self-audit
 
 **Universal Design** (Connell) — the design intent ceiling: equitable use, flexibility, simple and intuitive, perceptible information, tolerance for error, low effort, appropriate size and space. These are design virtues, not compliance checkboxes.
 
+**Situational impairment** (Wobbrock, ability-based design) — everyone is temporarily impaired at times: one hand busy, walking, gloves, bright sun, noise, a crying child, a different language. Design for the ability people have in that moment, not the ability they have at a desk.
+
 **Dark Patterns** (Brignull) — adversarial self-audit: trick questions, sneak into basket, roach motel, privacy zuckering, misdirection, hidden costs, bait and switch, confirmshaming, disguised ads, forced continuity. Are we doing any of these, even accidentally?
 
 ---
@@ -152,7 +185,7 @@ Use when: animation, transitions, motion design
 
 Most applicable in UI: staging (direct attention before the action), anticipation (setup before main action), timing (duration carries meaning), slow in/slow out (ease in and out; linear feels mechanical), follow-through (don't stop dead; overshoot and settle).
 
-Always respect `prefers-reduced-motion`.
+Always respect `prefers-reduced-motion`. Beyond that flag, large parallax, zoom and full-screen motion cause nausea and dizziness for people with vestibular disorders, and for anyone reading in a moving vehicle or in VR (sensory conflict). Keep motion small and tied to the user's own input.
 
 ---
 
@@ -203,10 +236,11 @@ Use when: dashboards, metrics displays, charts, any quantitative visual output
 ---
 
 ### Spatial & multisensory
-Use when: wayfinding, navigation design, physical-digital integration, notification design in sensory-rich environments
+Use when: wayfinding, navigation design, physical-digital integration, notification design in sensory-rich environments; wearables, haptics and audio alerts; anything used outdoors, moving, cold or one-handed; physical products and venues
 
 - **Lynch — 5 elements:** Paths (routes), Edges (boundaries), Districts (character areas), Nodes (junctions), Landmarks (unique orientation points). Navigation aids should use these, not grid coordinates. "Walk toward the sphere" over "turn left at junction."
 - **Spence — crossmodal perception:** senses are not independent. Sound changes perceived texture; vibration interacts with ambient music. Design haptic and audio notifications with awareness of the sensory environment they enter.
+- **Body and environment:** the senses have thresholds. Vibration is felt best around 250 Hz on bare skin and is masked by movement or clothing. Sound is masked by noise, and high frequencies fade with age. Cold hands lose touch accuracy, and a vehicle's vibration ruins small targets. Bodies vary in reach and grip: design from the 5th to the 95th percentile, and remember that about half of phone use is one-thumbed.
 - **Schafer — soundscape:** keynote sounds (background), signals (foreground), soundmarks (place identity). In high-noise environments: haptic over audio, peripheral over intrusive. `references/spatial.md`
 
 ---
@@ -244,12 +278,13 @@ Skip when: the work is only plain CRUD screens, forms and settings, or a complia
 ---
 
 ### Symbolic systems
-Use when: calendars, schedules and seasonal or lunar rhythm; ritual, ceremony and rites of passage (launches, anniversaries, onboarding as a threshold); compositional grids and proportion; celestial or astrology overlays; and products or brands that aim at meaning beyond function (memorials, heritage, spiritual or cultural work).
+Use when: calendars, schedules and seasonal or lunar rhythm; body rhythms (sleep, alarms, circadian and ~90-minute cycles, larks and owls); ritual, ceremony and rites of passage (launches, anniversaries, onboarding as a threshold); compositional grids and proportion; celestial or astrology overlays; and products or brands that aim at meaning beyond function (memorials, heritage, spiritual or cultural work).
 Skip when: the work is only plain CRUD screens, forms and settings, or a compliance-only audit, with none of the cases above. When both apply, Use wins.
 
 - **Astrology as temporal language:** not predictive science but a culturally refined symbolic system for marking time. Astronomical positions (real, calculable) + symbolic meanings (cultural, not physical). Useful for: temporal rhythm, marking transitions, cyclical event framing.
 - **Sacred geometry:** golden ratio (φ), Fibonacci, radial symmetry, mandala logic — compositional grammars with deep cultural resonance. Use as constraint and rationale, not mystical claim. Earn what you borrow.
 - **Cyclical vs. linear time:** Western modernity = linear (progress, directional history). Agrarian/astrological/indigenous = cyclical (seasons, lunar months, return). Festivals are cyclical time technology. Designing a schedule as "what's happening now" (linear) vs. "what kind of time is this" (cyclical) are different design choices.
+- **Body time (chronobiology):** the body keeps its own cycles: circadian (~24 h, set by light), ~90-minute sleep cycles, chronotype. Time prompts, alarms and intensity to where the body is in its cycle, not only to the clock. This is measurable biology, not symbol. Light at night: see Vision & light.
 - **Moon phases:** new (intention), waxing (accumulation), full (peak/revelation), waning (release). A built-in temporal rhythm many users feel without naming it. `references/symbolic.md`
 
 ---

@@ -75,6 +75,14 @@ Regardless of metaphysics, cyclical time *describes* certain aspects of human ex
 - Scheduling design: linear time (what happens at 18:00) vs. cyclical time (what kind of time is this — a transition moment, a threshold, a zone where different sensibilities govern)
 - Celestial overlays: planetary cycles are cyclical time made visible — a cyclical time instrument overlaid on a linear schedule.
 
+### Body time (chronobiology)
+The body is a cyclical-time instrument that needs no symbol to read. Unlike the systems above, its cycles are measurable:
+- **Circadian rhythm (~24 h):** set mainly by light. Light at night delays it, and morning light anchors it. See perceptual.md § Vision and light.
+- **Sleep cycles (~90 min):** light and deep sleep alternate. Waking from light sleep feels easier than waking from deep sleep. This is the premise of smart alarms.
+- **Chronotype:** larks and owls peak at different clock times. A fixed "best time" for everyone is linear-time thinking applied to a cyclical body.
+
+**For design:** time prompts, alarms, notifications and intensity to where the body is in its cycle, not only to the clock. Ask: what kind of time is this for the body? Is it winding down, asleep, or waking up?
+
 ---
 
 ## Symbolic Systems as Design Material

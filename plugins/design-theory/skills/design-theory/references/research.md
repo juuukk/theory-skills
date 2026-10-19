@@ -20,6 +20,46 @@ For tools used in demanding physical contexts: test in an approximation of that 
 
 ---
 
+## Context map (empathy map + moments of use)
+
+Contextual inquiry is the gold standard and is often not possible: a solo builder, a night-time use, a product that does not exist yet. The context map is the desk version. It is cheap, it is written before any theory is picked, and it decides which theories apply. Most "the skill missed something obvious" failures are a missing context, not a missing theory: red light at night was in the library's reach, but nothing asked when the screen is read.
+
+Write it once per project, in the intent or spec, and update it when the use changes.
+
+**Template**
+
+```
+## Context of use
+Who: <age range, senses (glasses? colour vision?), skill with this kind of tool>
+State: <rested/tired, calm/stressed, alone/with others, hands free or busy>
+Empathy map (at the moment of use):
+  Says: ...   Thinks: ...   Does: ...   Feels: ...
+Moments of use:
+  1. <ordinary moment>: where, light, noise, posture, hands, time of day, connection/battery
+  2. <edge moment>: ...   (at least one: 3 a.m., direct sun, moving, gloves/one hand,
+  3. ...                   interrupted, first use, low battery/offline)
+Pulls in: <the clusters the lookup gives, per moment>
+```
+
+**Lookup** — each attribute of a moment pulls in theory:
+
+| Attribute | Theory |
+|---|---|
+| Dark, night, bright sun, glare, small text, older eyes | perceptual.md § Vision and light (night vision, light and the body clock, colour vision, acuity and age, glare) |
+| One hand, gloves, cold, walking, a vehicle, imprecise touch | inclusion.md § Situational impairment; Fitts's law |
+| Tired, stressed, rushed, half awake, interrupted | interaction.md § User state, § Attention and vigilance, § Error types |
+| A time of day, sleep, waking, routines, seasons | symbolic.md § Body time |
+| Noise, silence needed, vibration, haptics, posture, reach | spatial.md § Body and Environment |
+| First use, rare task | Nielsen 6 (recognition) and 10 (help); Norman signifiers |
+| Offline, low battery, slow or failing service | code-theory reliability: the judge reads the same map |
+| Shared space, other people present | values.md (privacy, dignity); Spatial: soundscape |
+
+**Scored checks.** CTX-MAP: the project has a context map with at least one edge moment (FAIL: none, or only the ordinary moment). CTX-COVERAGE: every mapped moment has at least one finding or a stated N/A from the cluster its lookup names (FAIL: a moment no finding speaks to). The evidence is the map's location and the finding ids per moment.
+
+**Example (a sleep alarm on a watch).** Edge moment: 3 a.m., dark room, half awake, lying down, one hand. Lookup: Vision & light (red, dim; no white flash), User state (one glance, no reading), Body time (wake on the body's cycle), Body and environment (vibration felt through sleep, no sound for a partner). Each of these became a requirement; without the map, the first review shipped white text at night.
+
+---
+
 ## Participatory Design / Co-Design
 
 Involve users in the design process as active collaborators, not passive subjects.
