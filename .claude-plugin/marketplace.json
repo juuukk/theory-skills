@@ -14,7 +14,7 @@
     {
       "name": "code-theory",
       "source": "./plugins/code-theory",
-      "description": "Six areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security) with an evidence-or-FAIL rule and plain-language consequences."
+      "description": "Seven areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security, architecture) with an evidence-or-FAIL rule and plain-language consequences."
     }
   ]
 }

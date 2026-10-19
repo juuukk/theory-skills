@@ -3,7 +3,7 @@
 Two Claude Code skills that make Claude reason about your design and your code with named, established theory, and explain every finding as a plain-language consequence.
 
 - **design-theory:** clusters of design theory, from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology, with a deep-dive reference for each.
-- **code-theory:** six areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security), where every finding needs evidence.
+- **code-theory:** seven areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security, architecture), where every finding needs evidence.
 
 ## Install
 
@@ -44,7 +44,7 @@ You get findings in your own vocabulary: the consequence first ("ten options wil
 | IA and content | Rosenfeld and Morville's four systems, findability, UX writing |
 | Research methods | Contextual inquiry, jobs to be done, participatory design |
 
-Two experiential and cultural lenses are also there, used only when the work calls for them (events, festivals, rituals, products about time and meaning): **phenomenal** (Heidegger, Merleau-Ponty, peak experience, liminality, the sublime) and **symbolic systems** (cyclical time, sacred geometry, astrology as a temporal language rather than prediction). They stay out of ordinary UI and code reviews.
+Two lenses for experience- and meaning-centred work are also there, used when the work calls for them (events and festivals, immersive or embodied products, tools used in flow, wellbeing and rest, calendars and seasonal rhythm, rituals and rites of passage, grids and proportion): **phenomenal** (Heidegger, Merleau-Ponty, peak experience, liminality, the sublime) and **symbolic systems** (cyclical time, sacred geometry, astrology as a temporal language rather than prediction). For plain forms, settings and compliance-only reviews they are skipped.
 
 ## What code-theory covers
 
@@ -56,6 +56,7 @@ Two experiential and cultural lenses are also there, used only when the work cal
 | Maintainability | Can the next person change this safely? |
 | Privacy | Does personal data go only where it must, for only as long as it must? |
 | Security | Could someone misuse this, or did it ship a secret or a vulnerable dependency? |
+| Architecture | Does the shape hold: what depends on what, what changes together, what was decided and why? |
 
 Every finding needs evidence from the code, a test run or a tool's output. A claim without evidence counts as a fail, not a pass.
 

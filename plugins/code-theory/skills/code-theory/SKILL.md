@@ -1,11 +1,11 @@
 ---
 name: code-theory
-description: Judge code quality and safety against named computer-science principles (testing, reliability, simplicity, maintainability, privacy, security) with an evidence-or-FAIL rule and plain-language consequences. Activate when code is built, changed, reviewed, or declared done, and when deciding whether tests can be trusted. Companion of design-theory (surfaces); load both when a change touches rendered UI.
+description: Judge code quality and safety against named computer-science principles (testing, reliability, simplicity, maintainability, privacy, security, architecture) with an evidence-or-FAIL rule and plain-language consequences. Activate when code is built, changed, reviewed, or declared done, and when deciding whether tests can be trusted. Companion of design-theory (surfaces); load both when a change touches rendered UI.
 ---
 
 # Code Theory
 
-"It works" and "the tests pass" are claims, not evidence. This skill reviews code against six areas of established
+"It works" and "the tests pass" are claims, not evidence. This skill reviews code against seven areas of established
 computer-science principle, one named principle at a time, and says what each problem would cost in plain words.
 
 ## Who you are talking to
@@ -21,7 +21,7 @@ or the name helps them look it up. Match their vocabulary; never lecture.
 - A test suite that exits 0 but runs nothing proves nothing. Look for the count of tests that actually ran.
 - Fix the code or the test, never the wording of the finding.
 
-## The six areas
+## The seven areas
 
 | Area | The question | Read |
 |---|---|---|
@@ -31,6 +31,7 @@ or the name helps them look it up. Match their vocabulary; never lecture.
 | Maintainability | Can the next person change this safely? | `references/maintainability.md` |
 | Privacy | Does personal data go only where it must, for only as long as it must? | `references/privacy.md` |
 | Security | Could someone misuse this, or did it ship a secret or a vulnerable dependency? | `references/security.md` |
+| Architecture | Does the shape hold: what depends on what, what changes together, what was decided and why? | `references/architecture.md` |
 
 ## How to apply it
 

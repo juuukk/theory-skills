@@ -231,7 +231,8 @@ Use when: planning research, evaluating research approaches, informing design fr
 ---
 
 ### Phenomenal
-Use when: experience-centered design, festival/event contexts, designing for peak or altered states, the "does this need to exist at all?" test at a philosophical level
+Use when: events and festivals; immersive or embodied experiences (games, VR, installations, physical products); wellbeing, rest and recovery; tools people use in flow, where the interface should disappear; peak experiences, meditation and play; and any "should this exist at all?" question.
+Skip when: the work is only plain CRUD screens, forms and settings, or a compliance-only audit, with none of the cases above. When both apply, Use wins.
 
 - **Heidegger — ready-to-hand/present-at-hand:** tools in use disappear (ready-to-hand). Tools noticed-as-tools have broken their spell. The ideal interface is invisible through quality of use.
 - **Merleau-Ponty — embodied cognition:** the body is not a vessel for the mind — it is the ground of experience. Skilled use = tool incorporated into body schema. Breaking deeply incorporated gestures feels like a body violation.
@@ -243,7 +244,8 @@ Use when: experience-centered design, festival/event contexts, designing for pea
 ---
 
 ### Symbolic systems
-Use when: celestial/astrology overlays, sacred geometry as compositional grammar, temporal design beyond linear time, designs that aim at meaning beyond function
+Use when: calendars, schedules and seasonal or lunar rhythm; ritual, ceremony and rites of passage (launches, anniversaries, onboarding as a threshold); compositional grids and proportion; celestial or astrology overlays; and products or brands that aim at meaning beyond function (memorials, heritage, spiritual or cultural work).
+Skip when: the work is only plain CRUD screens, forms and settings, or a compliance-only audit, with none of the cases above. When both apply, Use wins.
 
 - **Astrology as temporal language:** not predictive science but a culturally refined symbolic system for marking time. Astronomical positions (real, calculable) + symbolic meanings (cultural, not physical). Useful for: temporal rhythm, marking transitions, cyclical event framing.
 - **Sacred geometry:** golden ratio (φ), Fibonacci, radial symmetry, mandala logic — compositional grammars with deep cultural resonance. Use as constraint and rationale, not mystical claim. Earn what you borrow.
