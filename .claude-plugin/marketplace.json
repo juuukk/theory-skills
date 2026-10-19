@@ -1,0 +1,20 @@
+{
+  "name": "theory-skills",
+  "owner": {
+    "name": "Jukka Yrjönen",
+    "url": "https://jukkayrjonen.com"
+  },
+  "description": "Design and code theory skills: named principles, plain-language consequences.",
+  "plugins": [
+    {
+      "name": "design-theory",
+      "source": "./plugins/design-theory",
+      "description": "16 clusters of design theory as the rationale and review lens for UI, copy, layout, charts, motion and brand, explained as plain-language consequences."
+    },
+    {
+      "name": "code-theory",
+      "source": "./plugins/code-theory",
+      "description": "Six areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security) with an evidence-or-FAIL rule and plain-language consequences."
+    }
+  ]
+}

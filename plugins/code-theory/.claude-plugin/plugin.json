@@ -1,0 +1,11 @@
+{
+  "name": "code-theory",
+  "description": "Six areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security) with an evidence-or-FAIL rule and plain-language consequences.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jukka Yrjönen",
+    "url": "https://jukkayrjonen.com"
+  },
+  "homepage": "https://gitlab.com/theory-skills/theory-skills",
+  "license": "CC-BY-4.0"
+}
