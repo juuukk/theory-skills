@@ -2,8 +2,8 @@
 
 Two Claude Code skills that make Claude reason about your design and your code with named, established theory, and explain every finding as a plain-language consequence.
 
-- **design-theory:** 16 clusters of design theory, from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology, with a deep-dive reference for each.
-- **code-theory:** six areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security) with an evidence-or-FAIL rule.
+- **design-theory:** clusters of design theory, from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology, with a deep-dive reference for each.
+- **code-theory:** six areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security), where every finding needs evidence.
 
 ## Install
 
@@ -43,10 +43,23 @@ You get findings in your own vocabulary: the consequence first ("ten options wil
 | Spatial and multisensory | Lynch's wayfinding, crossmodal perception, soundscape |
 | IA and content | Rosenfeld and Morville's four systems, findability, UX writing |
 | Research methods | Contextual inquiry, jobs to be done, participatory design |
-| Phenomenal | Heidegger, Merleau-Ponty, peak experience, liminality, the sublime |
-| Symbolic systems | Cyclical time, sacred geometry, astrology as a temporal language |
 
-This is the theory and the way of applying it. It does not include a scoring or measurement system.
+Two experiential and cultural lenses are also there, used only when the work calls for them (events, festivals, rituals, products about time and meaning): **phenomenal** (Heidegger, Merleau-Ponty, peak experience, liminality, the sublime) and **symbolic systems** (cyclical time, sacred geometry, astrology as a temporal language rather than prediction). They stay out of ordinary UI and code reviews.
+
+## What code-theory covers
+
+| Area | The question it asks of a change |
+|---|---|
+| Tests | Would the tests notice if this code were wrong? |
+| Reliability | What happens when something it depends on fails, hangs or runs twice? |
+| Simplicity | Is there less here than there could be, and can each part change alone? |
+| Maintainability | Can the next person change this safely? |
+| Privacy | Does personal data go only where it must, for only as long as it must? |
+| Security | Could someone misuse this, or did it ship a secret or a vulnerable dependency? |
+
+Every finding needs evidence from the code, a test run or a tool's output. A claim without evidence counts as a fail, not a pass.
+
+Both skills are the theory and the way of applying it. They do not include a scoring or measurement system.
 
 ## Licence
 
