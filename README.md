@@ -43,8 +43,8 @@ You get findings in your own vocabulary: the consequence first ("ten options wil
 | Spatial and multisensory | Lynch's wayfinding, crossmodal perception, soundscape |
 | IA and content | Rosenfeld and Morville's four systems, findability, UX writing |
 | Research methods | Contextual inquiry, jobs to be done, participatory design |
-
-Two lenses for experience- and meaning-centred work are also there, used when the work calls for them (events and festivals, immersive or embodied products, tools used in flow, wellbeing and rest, calendars and seasonal rhythm, rituals and rites of passage, grids and proportion): **phenomenal** (Heidegger, Merleau-Ponty, peak experience, liminality, the sublime) and **symbolic systems** (cyclical time, sacred geometry, astrology as a temporal language rather than prediction). For plain forms, settings and compliance-only reviews they are skipped.
+| Phenomenal | Heidegger's ready-to-hand, embodied cognition, peak experience, liminality |
+| Symbolic systems | Cyclical time, proportion and sacred geometry, ritual and threshold |
 
 ## What code-theory covers
 
