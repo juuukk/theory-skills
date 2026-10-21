@@ -1,8 +1,8 @@
 {
   "name": "theory-skills",
   "owner": {
-    "name": "Jukka Yrjönen",
-    "url": "https://jukkayrjonen.com"
+    "name": "theory-skills",
+    "url": "https://gitlab.com/theory-skills/theory-skills"
   },
   "description": "Design and code theory skills: named principles, plain-language consequences.",
   "plugins": [

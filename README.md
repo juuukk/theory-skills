@@ -5,17 +5,31 @@ Two Claude Code skills that make Claude reason about your design and your code w
 - **design-theory:** clusters of design theory, from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology, with a deep-dive reference for each.
 - **code-theory:** seven areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security, architecture), where every finding needs evidence.
 
-## Install
+## Install in Claude Code
 
-In Claude Code:
+Two steps. First add the marketplace, using the full https address (a bare gitlab.com/theory-skills/theory-skills does not work):
 
 ```
 /plugin marketplace add https://gitlab.com/theory-skills/theory-skills.git
+```
+
+Then install the plugins you want:
+
+```
 /plugin install design-theory@theory-skills
 /plugin install code-theory@theory-skills
 ```
 
+Or do it in one command from your shell. This needs Claude Code v2.1.292 or newer:
+
+```
+claude plugin install design-theory --marketplace https://gitlab.com/theory-skills/theory-skills.git
+claude plugin install code-theory --marketplace https://gitlab.com/theory-skills/theory-skills.git
+```
+
 Both then show as installed under `/plugin`. Claude can load them on its own during design or code work, but for a quick question it often answers without them. Name the skill to be sure.
+
+## Other install routes
 
 For Codex, Cline, Amp and the other agents that read Agent Skills, install them into a project with:
 
