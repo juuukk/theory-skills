@@ -17,6 +17,12 @@ In Claude Code:
 
 Both then show as installed under `/plugin`. Claude can load them on its own during design or code work, but for a quick question it often answers without them. Name the skill to be sure.
 
+For Codex, Cline, Amp and the other agents that read Agent Skills, install them into a project with:
+
+```
+npx skills add https://gitlab.com/theory-skills/theory-skills
+```
+
 ## Try it
 
 - "Use design-theory to review this signup form. What would stop people finishing it?"
