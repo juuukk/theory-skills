@@ -5,11 +5,22 @@
     "url": "https://gitlab.com/theory-skills/theory-skills"
   },
   "description": "Claude Code skills for design review and code review: named principles, explained as plain-language consequences.",
+  "repository": "https://github.com/juuukk/theory-skills",
   "plugins": [
     {
       "name": "design-theory",
       "source": "./plugins/design-theory",
       "description": "16 clusters of design theory as the rationale and review lens for UI, copy, layout, charts, motion and brand, and equally for specs, architecture, code and infra, explained as plain-language consequences.",
+      "repository": "https://github.com/juuukk/theory-skills",
+      "category": "design",
+      "tags": [
+        "design-review",
+        "ux",
+        "accessibility",
+        "wcag",
+        "ui",
+        "brand"
+      ],
       "keywords": [
         "design-review",
         "ux",
@@ -23,6 +34,16 @@
       "name": "code-theory",
       "source": "./plugins/code-theory",
       "description": "Reviews code against eight areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, design for the context of use). Every finding needs evidence, and each is explained as a plain-language consequence.",
+      "repository": "https://github.com/juuukk/theory-skills",
+      "category": "code-review",
+      "tags": [
+        "code-review",
+        "testing",
+        "reliability",
+        "security",
+        "privacy",
+        "architecture"
+      ],
       "keywords": [
         "code-review",
         "testing",
