@@ -5,6 +5,8 @@ Two Claude Code skills that make Claude reason about your design and your code w
 - **design-theory:** clusters of design theory, from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology, with a deep-dive reference for each.
 - **code-theory:** seven areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security, architecture), where every finding needs evidence.
 
+The same repository is mirrored on GitHub at https://github.com/juuukk/theory-skills, so `/plugin marketplace add juuukk/theory-skills` works too.
+
 ## Install in Claude Code
 
 Two steps. First add the marketplace, using the full https address (a bare gitlab.com/theory-skills/theory-skills does not work):
