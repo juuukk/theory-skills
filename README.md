@@ -3,7 +3,7 @@
 Two Claude Code skills that make Claude reason about your design and your code with named, established theory, and explain every finding as a plain-language consequence.
 
 - **design-theory:** clusters of design theory, from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology, with a deep-dive reference for each.
-- **code-theory:** seven areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security, architecture), where every finding needs evidence.
+- **code-theory:** eight areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, and design for the context of use), where every finding needs evidence.
 
 The same repository is mirrored on GitHub at https://github.com/juuukk/theory-skills, so `/plugin marketplace add juuukk/theory-skills` works too.
 
@@ -49,6 +49,8 @@ You get findings in your own vocabulary: the consequence first ("ten options wil
 
 ## What design-theory covers
 
+Design here is the whole system, not its surface: intents and specs, architecture, code, infra, failure states and messages are designed too. Use design-theory first when a plan is written, so design shapes the decisions; a review at the end is the second pass.
+
 | Cluster | In one line |
 |---|---|
 | Perceptual | Gestalt, colour, typography and brand tokens: how the eye groups and ranks |
@@ -79,6 +81,7 @@ You get findings in your own vocabulary: the consequence first ("ten options wil
 | Privacy | Does personal data go only where it must, for only as long as it must? |
 | Security | Could someone misuse this, or did it ship a secret or a vulnerable dependency? |
 | Architecture | Does the shape hold: what depends on what, what changes together, what was decided and why? |
+| Design | Was it built for the moments it will really run in (offline, a killed process, a slow service, a tired person at night), not for a desk? |
 
 Every finding needs evidence from the code, a test run or a tool's output. A claim without evidence counts as a fail, not a pass.
 

@@ -1,6 +1,6 @@
 ---
 name: design-theory
-description: Apply established design theory (16 framework clusters — Gestalt, Nielsen, Norman, Laws of UX, WCAG, Tufte, motion, brand, behavioral, and more) as the rationale and audit lens for any design-adjacent decision. Activate whenever design decisions are being made or evaluated — UI, CSS, copy, IA, components, animation, dashboards, brand, audits, planning — including implementation work, not just explicit design reviews. Execution-focused skills (dataviz, frontend-design, or similar) handle the how; this supplies the why, and tells you to load them alongside it.
+description: Apply established design theory (16 framework clusters — Gestalt, Nielsen, Norman, Laws of UX, WCAG, Tufte, motion, brand, behavioral, and more) as the rationale and audit lens for any design-adjacent decision. Activate whenever design decisions are being made or evaluated — UI, CSS, copy, IA, components, animation, dashboards, brand, audits, planning, and equally intents, specs, architecture, code structure, infra, data flow, monitors and messages (design is the whole system, not its surface) — including implementation work, not just explicit design reviews. Execution-focused skills (dataviz, frontend-design, or similar) handle the how; this supplies the why, and tells you to load them alongside it.
 ---
 
 # Design Theory
@@ -12,6 +12,8 @@ Adapt to whoever you are working with: a designer, a developer, or someone with 
 This skill supplies rationale and audit criteria — not execution technique. Before producing design output, scan the currently available skills list for an execution-focused companion and load it alongside this one: charts/dashboards/plots → a dataviz-type skill; new UI or visual direction → a frontend-design-type skill; artifact pages → an artifact-design-type skill. Match by what the description says it does, not by these exact names — installed skills vary. If no companion exists, proceed with this skill alone.
 
 ## How to apply this skill
+
+**Design is all-penetrating, not a surface.** Code, infra, architecture, data flow, state and failure design, monitors, messages, intents and specs are all designed, and the clusters apply to each (a quiet monitor is calm technology; an intent with no next step fails Norman's feedback; a kill rule that can never fire is an MDA failure). Apply this skill first at Define, on the intent or spec, so design shapes the decisions; the review at the end of a build is the second pass, never the first.
 
 **Every task:** Mentally scan the 16 framework clusters. Apply those with meaningful signal — a finding, a risk, a constraint, a strength. Skip those that add nothing. Never force-fit for completeness.
 
@@ -38,9 +40,9 @@ A context map is a scored check (CTX-MAP, CTX-COVERAGE): an audit with no map, o
 
 **Explicit audits:** Structure output by framework — findings, priority (HIGH / MED / LOW), recommendations. Read the relevant reference file before responding.
 
-**Pass/fail questions** ("is this accessible?", "is it done?"): answer framework by framework with evidence from the real artifact: what the rendered page, the screenshot or the copy actually shows. A principle with no evidence either way is not a pass; say it was not checked, or check it.
+**Pass/fail questions** ("is this accessible?", "is it done?"): answer framework by framework with evidence from the real artifact: what the rendered page, the screenshot, the copy, the code or the running system actually shows. A principle with no evidence either way is not a pass; say it was not checked, or check it.
 
-**Planning / brainstorming:** Use process frameworks to locate the current phase. Use other frameworks to surface constraints and opportunities.
+**Planning / brainstorming / writing an intent or spec:** Use process frameworks to locate the current phase. Then run the other clusters over the planned system as a whole: write the context map, the states and how each ends, every failure branch and who acts on it, the messages, and the values, into the intent or spec as decisions. A contradiction found here costs a sentence; found in the build audit it costs a patch.
 
 **Deep dives:** When the user asks for a full audit or to go deep on a framework, read the relevant reference file in `references/`.
 

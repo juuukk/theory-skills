@@ -1,7 +1,7 @@
 {
   "name": "design-theory",
-  "description": "16 clusters of design theory as the rationale and review lens for UI, copy, layout, charts, motion and brand, explained as plain-language consequences.",
-  "version": "3.5.0",
+  "description": "16 clusters of design theory as the rationale and review lens for UI, copy, layout, charts, motion and brand, and equally for specs, architecture, code and infra, explained as plain-language consequences.",
+  "version": "3.6.0",
   "author": {
     "name": "theory-skills",
     "url": "https://gitlab.com/theory-skills"
