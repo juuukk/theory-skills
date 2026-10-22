@@ -91,4 +91,4 @@ Both skills are the theory and the way of applying it. They do not include a sco
 
 CC BY 4.0: use, share and adapt it, with attribution to Jukka Yrjönen. See `LICENSE`.
 
-If this helps, you can support it on [Ko-fi](https://ko-fi.com/juukk).
+Both skills are free to use and adapt. Payment is optional, and [Ko-fi](https://ko-fi.com/juukk) is where it goes.
