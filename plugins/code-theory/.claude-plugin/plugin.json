@@ -1,11 +1,19 @@
 {
   "name": "code-theory",
-  "description": "Eight areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, design for the context of use) with an evidence-or-FAIL rule and plain-language consequences.",
+  "description": "Reviews code against eight areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, design for the context of use). Every finding needs evidence, and each is explained as a plain-language consequence.",
   "version": "1.3.0",
   "author": {
     "name": "theory-skills",
     "url": "https://gitlab.com/theory-skills"
   },
   "homepage": "https://gitlab.com/theory-skills/theory-skills",
-  "license": "CC-BY-4.0"
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "code-review",
+    "testing",
+    "reliability",
+    "security",
+    "privacy",
+    "architecture"
+  ]
 }

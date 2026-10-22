@@ -4,17 +4,33 @@
     "name": "theory-skills",
     "url": "https://gitlab.com/theory-skills/theory-skills"
   },
-  "description": "Design and code theory skills: named principles, plain-language consequences.",
+  "description": "Claude Code skills for design review and code review: named principles, explained as plain-language consequences.",
   "plugins": [
     {
       "name": "design-theory",
       "source": "./plugins/design-theory",
-      "description": "16 clusters of design theory as the rationale and review lens for UI, copy, layout, charts, motion and brand, and equally for specs, architecture, code and infra, explained as plain-language consequences."
+      "description": "16 clusters of design theory as the rationale and review lens for UI, copy, layout, charts, motion and brand, and equally for specs, architecture, code and infra, explained as plain-language consequences.",
+      "keywords": [
+        "design-review",
+        "ux",
+        "accessibility",
+        "wcag",
+        "ui",
+        "brand"
+      ]
     },
     {
       "name": "code-theory",
       "source": "./plugins/code-theory",
-      "description": "Eight areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, design for the context of use) with an evidence-or-FAIL rule and plain-language consequences."
+      "description": "Reviews code against eight areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, design for the context of use). Every finding needs evidence, and each is explained as a plain-language consequence.",
+      "keywords": [
+        "code-review",
+        "testing",
+        "reliability",
+        "security",
+        "privacy",
+        "architecture"
+      ]
     }
   ]
 }

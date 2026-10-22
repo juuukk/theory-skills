@@ -5,11 +5,15 @@ Two Claude Code skills that make Claude reason about your design and your code w
 - **design-theory:** clusters of design theory, from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology, with a deep-dive reference for each.
 - **code-theory:** eight areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, and design for the context of use), where every finding needs evidence.
 
-The same repository is mirrored on GitHub at https://github.com/juuukk/theory-skills, so `/plugin marketplace add juuukk/theory-skills` works too.
-
 ## Install in Claude Code
 
-Two steps. First add the marketplace, using the full https address (a bare gitlab.com/theory-skills/theory-skills does not work):
+Two steps. First add the marketplace from GitHub:
+
+```
+/plugin marketplace add juuukk/theory-skills
+```
+
+The same repository is on GitLab. From there, use the full https address (a bare gitlab.com/theory-skills/theory-skills does not work):
 
 ```
 /plugin marketplace add https://gitlab.com/theory-skills/theory-skills.git
@@ -29,7 +33,9 @@ claude plugin install design-theory --marketplace https://gitlab.com/theory-skil
 claude plugin install code-theory --marketplace https://gitlab.com/theory-skills/theory-skills.git
 ```
 
-Both then show as installed under `/plugin`. Claude can load them on its own during design or code work, but for a quick question it often answers without them. Name the skill to be sure.
+Both then show as installed under `/plugin`. Claude can load them on its own during design or code work, but for a quick question it often answers without them. Name the skill to be sure. To remove one, run `/plugin uninstall design-theory@theory-skills` or `/plugin uninstall code-theory@theory-skills`.
+
+Both plugins are Markdown and JSON files only, with no scripts and no hooks. Claude follows them as instructions, so you can read every line before you install.
 
 ## Other install routes
 
