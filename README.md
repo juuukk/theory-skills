@@ -1,9 +1,10 @@
 # theory-skills
 
-Two Claude Code skills that make Claude reason about your design and your code with named, established theory, and explain every finding as a plain-language consequence.
+Two Claude Code skills that make Claude reason about your design and your code with named, established theory, and explain every finding as a plain-language consequence, and a gate that stops Claude from finishing while the UI it just wrote fails WCAG A.
 
 - **design-theory:** clusters of design theory, from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology, with a deep-dive reference for each.
 - **code-theory:** eight areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, and design for the context of use), where every finding needs evidence.
+- **design-gate:** a Stop hook and a GitHub Action. When Claude adds an image with no alt text, an unlabelled field or a button with no name, it gets the list with a fix for each before it can say done. Only new lines are judged, so old debt never blocks. See [plugins/design-gate/README.md](plugins/design-gate/README.md).
 
 ## Install in Claude Code
 
@@ -24,6 +25,7 @@ Then install the plugins you want:
 ```
 /plugin install design-theory@theory-skills
 /plugin install code-theory@theory-skills
+/plugin install design-gate@theory-skills
 ```
 
 Or do it in one command from your shell. This needs Claude Code v2.1.292 or newer:
@@ -35,7 +37,7 @@ claude plugin install code-theory --marketplace https://gitlab.com/theory-skills
 
 Both then show as installed under `/plugin`. Claude can load them on its own during design or code work, but for a quick question it often answers without them. Name the skill to be sure. To remove one, run `/plugin uninstall design-theory@theory-skills` or `/plugin uninstall code-theory@theory-skills`.
 
-Both plugins are Markdown and JSON files only, with no scripts and no hooks. Claude follows them as instructions, so you can read every line before you install.
+design-theory and code-theory are Markdown and JSON files only, with no scripts and no hooks. Claude follows them as instructions, so you can read every line before you install. design-gate is different: it runs a Node script after every turn, on your machine, with no network calls except the local pages you list. Its code and tests are in `plugins/design-gate/`.
 
 ## Other install routes
 
@@ -95,6 +97,6 @@ Both skills are the theory and the way of applying it. They do not include a sco
 
 ## Licence
 
-CC BY 4.0: use, share and adapt it, with attribution to Jukka Yrjönen. See `LICENSE`.
+The skills are CC BY 4.0: use, share and adapt them, with attribution to Jukka Yrjönen. See `LICENSE`. design-gate's code is MIT (`plugins/design-gate/LICENSE`).
 
 Both skills are free to use and adapt. Payment is optional, and [Ko-fi](https://ko-fi.com/juukk) is where it goes.

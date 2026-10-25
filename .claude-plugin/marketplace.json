@@ -4,7 +4,7 @@
     "name": "theory-skills",
     "url": "https://gitlab.com/theory-skills/theory-skills"
   },
-  "description": "Claude Code skills for design review and code review: named principles, explained as plain-language consequences.",
+  "description": "Claude Code skills for design review and code review: named principles, explained as plain-language consequences, and a gate that blocks new WCAG A failures.",
   "repository": "https://github.com/juuukk/theory-skills",
   "plugins": [
     {
@@ -51,6 +51,29 @@
         "security",
         "privacy",
         "architecture"
+      ]
+    },
+    {
+      "name": "design-gate",
+      "source": "./plugins/design-gate",
+      "description": "Stops Claude from finishing a turn while the UI it just wrote fails WCAG A (missing alt text, unlabelled fields and buttons, keyboard traps), with the fix for each. Only new lines are judged; the same check runs as a GitHub Action on pull requests.",
+      "repository": "https://github.com/juuukk/theory-skills",
+      "category": "testing",
+      "tags": [
+        "accessibility",
+        "wcag",
+        "hooks",
+        "github-action",
+        "ci",
+        "axe-core"
+      ],
+      "keywords": [
+        "accessibility",
+        "wcag",
+        "hooks",
+        "github-action",
+        "ci",
+        "axe-core"
       ]
     }
   ]

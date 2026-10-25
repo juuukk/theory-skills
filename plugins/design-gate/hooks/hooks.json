@@ -1,0 +1,11 @@
+{
+  "description": "design gate: blocks the end of a turn while UI written this session fails WCAG A",
+  "hooks": {
+    "SessionStart": [
+      { "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/run.mjs\" session-start", "timeout": 10 }] }
+    ],
+    "Stop": [
+      { "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/run.mjs\" stop", "timeout": 120 }] }
+    ]
+  }
+}

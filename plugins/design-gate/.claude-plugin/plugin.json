@@ -1,0 +1,19 @@
+{
+  "name": "design-gate",
+  "description": "Stops Claude from finishing a turn while the UI it just wrote fails WCAG A (missing alt text, unlabelled fields and buttons, keyboard traps), with the fix for each. Only new lines are judged; the same check runs as a GitHub Action on pull requests.",
+  "version": "0.1.0",
+  "author": {
+    "name": "theory-skills",
+    "url": "https://gitlab.com/theory-skills"
+  },
+  "homepage": "https://gitlab.com/theory-skills/theory-skills",
+  "license": "MIT",
+  "keywords": [
+    "accessibility",
+    "wcag",
+    "hooks",
+    "github-action",
+    "ci",
+    "axe-core"
+  ]
+}
