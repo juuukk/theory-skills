@@ -106,6 +106,37 @@ A notification that buzzes once and fades = calm. A notification that requires a
 
 ---
 
+## Design systems: atomic structure and token tiers
+
+A design system is the brand core made usable. Three parts do the work:
+- the derivation table (process.md, Brand Sprint) gives each value a reason;
+- the token tiers carry the values;
+- the atomic structure decides where each value may be used.
+
+**Token tiers.** There are three layers, and each one refers only to the layer below it.
+- **Primitive** (also called core or base). The raw palette and scales: colour ramps, font families, the type ratio, the space unit, radius and line-weight steps, durations and easings. Each primitive carries its reason, which is its row in the derivation table. Components never use primitives directly.
+- **Semantic** (also called alias or decision). What a value is for: text, muted text, surface, accent, focus, border; body, heading, display; tight gap, section gap. Theme modes such as light, dark and high contrast point the semantic tokens at other primitives, and the components stay the same.
+- **Component.** The decisions one component makes: button background, tag padding, card radius, datebox size. These point at semantic tokens.
+
+A component rule that reads a primitive, or a typed-in length or colour, skips a tier, and retheming the brand will miss it. The W3C Design Tokens Community Group format uses these tiers. Salesforce Lightning started the idea, and Material 3 and Adobe Spectrum use the same three layers.
+
+**Atomic design (Frost 2016).** Interfaces are built from the bottom up:
+- **atoms:** button, tag, field, label, icon;
+- **molecules:** a few atoms with one job, such as a card, a date block or a form row;
+- **organisms:** header, hero, footer, a list of cards;
+- **templates:** the page structure with placeholder content;
+- **pages:** the template with real content, where the system gets tested.
+
+Two rules make it work. A level uses only the levels below it. Every atom and molecule exists once and is reused, so a fix lands everywhere.
+
+The hierarchy is a mental model, not a folder rule. Write it down as a map from each component to its level and its tokens. Then a reviewer can check that the page is made of the system, not built beside it.
+
+**Several brands, one system.** Some products share structure, such as templates on one skeleton or white-label sites. They share the atoms, molecules and organisms. The brands differ only in their primitive and semantic tokens and their content. A brand that needs a different component is a design decision to record, not a fork to hide.
+
+*Use when: building or auditing any multi-page surface, theme, template or component library, and whenever a value is typed into a component instead of named.*
+
+---
+
 ## Game Theory sidebar
 
 Game theory applies when **multiple parties** are involved with partially conflicting interests. For single-user tools, largely irrelevant. For platforms:

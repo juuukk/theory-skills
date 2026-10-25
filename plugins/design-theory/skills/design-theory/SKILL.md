@@ -42,7 +42,7 @@ A context map is a scored check (CTX-MAP, CTX-COVERAGE): an audit with no map, o
 
 **Pass/fail questions** ("is this accessible?", "is it done?"): answer framework by framework with evidence from the real artifact: what the rendered page, the screenshot, the copy, the code or the running system actually shows. A principle with no evidence either way is not a pass; say it was not checked, or check it.
 
-**Planning / brainstorming / writing an intent or spec:** Use process frameworks to locate the current phase. Then run the other clusters over the planned system as a whole: write the context map, the states and how each ends, every failure branch and who acts on it, the messages, and the values, into the intent or spec as decisions. A contradiction found here costs a sentence; found in the build audit it costs a patch.
+**Planning / brainstorming / writing an intent or spec:** Use process frameworks to locate the current phase. Then run the other clusters over the planned system as a whole: write the context map, the brand core, derivation table and system map (Brand foundation, below) for anything with a surface or a voice, the states and how each ends, every failure branch and who acts on it, the messages, and the values, into the intent or spec as decisions. A contradiction found here costs a sentence; found in the build audit it costs a patch.
 
 **Deep dives:** When the user asks for a full audit or to go deep on a framework, read the relevant reference file in `references/`.
 
@@ -50,9 +50,15 @@ A context map is a scored check (CTX-MAP, CTX-COVERAGE): an audit with no map, o
 
 **When the question is whether to intervene at all:** apply Weiser's calm technology test. The right answer is sometimes for the system to disappear — do nothing, or remove something rather than add it.
 
-## Brand foundation pre-flight
+## Brand foundation: core, derivation, system (a Define step)
 
-When the work is brand-level, or the project has no stated direction and the person wants one, check whether these brand essentials are defined; downstream decisions trace back to them. Never hold up a small task for them.
+A designer does not start at the surface until there are reasons for it. Before any surface work (UI, copy, motion, components, a theme, a template), write three things into the brief or spec. For a small task inside an existing system, check they exist; never hold the task up writing them:
+
+1. **The brand core:** the six essentials below. A child brand, such as a template, a feature or a sub-product, writes its own and names the parent values it inherits.
+2. **The derivation table** (`references/process.md § From core to tokens`): one row per primitive token family (typefaces, type ratio, colour including dark mode, space, radius and line weight, motion, copy tone). Each row traces core item → slider → psychological link with its evidence strength → value, across the visceral, behavioural and reflective levels.
+3. **The system map** (`references/systems.md § Design systems`): tokens in primitive, semantic and component tiers, and each component placed as an atom, molecule or organism. Components use only semantic or component tokens.
+
+Then the surface. When an existing surface has no core, write the core first and let the derivation overturn earlier picks; do not write reasons backwards for values already chosen.
 
 Brand essentials (Brand Sprint):
 - **20-year roadmap** — where is this going long-term?

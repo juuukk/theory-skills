@@ -162,6 +162,40 @@ If the answer to any of these is no, or "sort of," or "everyone has a different 
 
 This applies to every derived design decision — not just brand work. A CSS decision about button corner radius should be traceable to personality sliders. A copy tone should be traceable to values and audience. An animation style should be traceable to personality (playful vs. serious, fast vs. deliberate). The chain should exist. The Brand Sprint ensures it does.
 
+### From core to tokens: the derivation table
+The foundation audit asks whether the chain exists. The derivation table is that chain written down at Define, before any surface. It has one row per primitive token family:
+
+| Core item (Why, a value, an audience) | Slider position | Psychological link (mechanism, evidence strength) | Token decision |
+|---|---|---|---|
+
+Families that need a row:
+- typefaces, in their display and text roles;
+- the type-scale ratio;
+- colour: hue, temperature, lightness, and the dark-mode variant;
+- the spacing unit and rhythm;
+- radius and line weight;
+- motion duration and easing;
+- copy tone.
+
+A value with no row was picked at the surface. It was chosen because it looked right, so nothing can say when it is wrong.
+
+Across the table, cover the three levels of Emotional Design (Norman):
+- **Visceral:** what the colour, shape and type feel like at first glance.
+- **Behavioural:** what the size, spacing and motion do to use: tap targets, reading rhythm, how responses feel.
+- **Reflective:** what the choice says about the person using it, meaning the self-image the brand offers.
+
+These are the psychological links, with how much each one can carry:
+- **Typeface personality** (Brumberger 2003; Henderson, Giese & Cote 2004; Shaikh 2007). Readers agree reliably on broad traits such as elegant, friendly, sturdy or modern. They judge text as more fitting when the face matches the content. The evidence is moderate for broad traits and weak for fine differences between similar faces.
+- **Curvature** (Bar & Neta 2006; Bertamini et al. 2016). Curved shapes are mildly preferred and read as safer and friendlier. Sharp angles read as precise or tense. The effect is small and robust, but context changes it.
+- **Colour** (Elliot & Maier 2014; Labrecque & Milne 2012). Lightness and saturation carry arousal and warmth more reliably than hue does. Hue meanings are learned and depend on culture (see Colour Theory, cultural meaning). Treat hue associations as convention, and lightness and saturation as the stronger lever.
+- **Proportion and rhythm** (Bringhurst, scales as musical intervals). A type scale built on one ratio reads as ordered. A tight ratio, such as the minor third (1.2), feels quiet. A wide one, such as the perfect fifth (1.5), feels dramatic. This is a craft convention, not an experimental finding, so say so.
+- **Motion** (Disney timing; Material and Apple motion guidance). Duration and easing read as character. Short, eased motion reads as calm and competent; overshoot reads as playful. This is convention, and practitioner sources agree on it.
+- **Processing fluency** (Reber, Schwarz & Winkielman 2004). What is easy to perceive is judged truer, likelier and more pleasant. The evidence is strong, and it is the general reason a consistent, coherent system matters at all.
+
+The effects are small and depend on culture and context. The table records the reason and how strong it is. It does not pretend a radius proves a value. A row marked "convention" is honest. A row with no link is a gap.
+
+A child brand is a template, a feature or a sub-product. It writes its own core and its own table, and says which parent values it inherits and which slider positions it moves. The token families it shares with the parent stay shared, and only the moved positions get new values.
+
 ### The fractal dimension
 Brand Sprint principles apply at multiple scales. A product feature has a mini brand: what does it stand for, who is it for, how does it express the parent brand while doing something specific? A campaign has a brand moment: does it reflect the core or deviate from it? The same audit questions apply.
 
