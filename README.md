@@ -91,7 +91,27 @@ Design here is the whole system, not its surface: intents and specs, architectur
 
 Every finding needs evidence from the code, a test run or a tool's output. A claim without evidence counts as a fail, not a pass.
 
-Both skills are the theory and the way of applying it. They do not include a scoring or measurement system.
+Both free skills are the theory and the way of applying it; they contain no scoring or measurement system.
+
+## design gate pro (paid)
+
+The free skills never score anything. design gate pro is a separate Claude Code plugin that adds the scoring, for teams who want the theory enforced, not only consulted.
+
+- **WCAG floor:** every turn, it blocks the turn from ending while the UI Claude just wrote fails WCAG A. After two tries the turn ends and reports FAIL.
+- **Scored gates:** `/design-gate:audit` scores the change against the design clusters and seven of the eight code areas above (architecture is advisory), PASS or FAIL per cluster with evidence. With scored mode on, the pull-request check fails until a passing scored run for the pull request's files is committed.
+- **Only what changed is judged,** so existing debt never blocks you.
+- **Nothing hosted:** the plugin sends nothing anywhere itself. The judges are Claude subagents in your own Claude Code session, so scored runs use your Claude Code plan.
+
+Needs Node 18+ and git. The scored gates also need Chrome, Node 20+ and Python 3.11+. The WCAG floor is MIT; the scored gates are under a subscriber licence.
+
+It is a monthly subscription with a 14-day free trial, sold through Polar:
+
+- [Per developer](https://buy.polar.sh/polar_cl_pHHOQNaAcCxFzjTgeG2u0kgQlUOZbc8GIxMpU1EZHTG): EUR 9 or USD 9 a month.
+- [Per repository](https://buy.polar.sh/polar_cl_1EnpRVxPo4JtcQrS1uu1roxBMo8664dIAtFPP12uWZV): EUR 19 or USD 19 a month. One subscription, one repository's pull-request gate, any contributor.
+
+At checkout you connect your GitHub account, and GitHub invites it to the private repository, whose README has the install steps. Cancel with one click in the Polar customer portal at any time. Repository access ends with the paid period; versions you already have stay usable under the subscriber licence.
+
+The two skills above stay free.
 
 ## Licence
 
