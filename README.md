@@ -1,9 +1,16 @@
 # theory-skills
 
-Two Claude Code skills that make Claude reason about your design and your code with named, established theory, and explain every finding as a plain-language consequence.
+Three Claude Code skills that review design and code against named, established theory and explain every finding as a plain-language consequence. Install the one you need from your shell:
 
-- **design-theory:** clusters of design theory, from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology, with a deep-dive reference for each.
-- **code-theory:** eight areas of software-engineering principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, and design for the context of use), where every finding needs evidence.
+```
+npx skills add juuukk/theory-skills --skill design-review
+npx skills add juuukk/theory-skills --skill design-theory
+npx skills add juuukk/theory-skills --skill code-theory
+```
+
+- **design-review:** give it a screenshot, a URL or a file. You get up to seven findings, worst first, each saying where it is, what it costs the user and the fix.
+- **design-theory:** you get the reasoning behind a design decision, or a full review, from clusters of design theory running from Gestalt and Nielsen to WCAG, Tufte, behavioural design and calm technology.
+- **code-theory:** you get findings on a code change across eight areas (tests, reliability, simplicity, maintainability, privacy, security, architecture, and design for the context of use), each with evidence from the code, a test run or a tool.
 
 ## Install in Claude Code
 
@@ -22,6 +29,7 @@ The same repository is on GitLab. From there, use the full https address (a bare
 Then install the plugins you want:
 
 ```
+/plugin install design-review@theory-skills
 /plugin install design-theory@theory-skills
 /plugin install code-theory@theory-skills
 ```
@@ -29,13 +37,14 @@ Then install the plugins you want:
 Or do it in one command from your shell. This needs Claude Code v2.1.292 or newer:
 
 ```
+claude plugin install design-review --marketplace https://gitlab.com/theory-skills/theory-skills.git
 claude plugin install design-theory --marketplace https://gitlab.com/theory-skills/theory-skills.git
 claude plugin install code-theory --marketplace https://gitlab.com/theory-skills/theory-skills.git
 ```
 
-Both then show as installed under `/plugin`. Claude can load them on its own during design or code work, but for a quick question it often answers without them. Name the skill to be sure. To remove one, run `/plugin uninstall design-theory@theory-skills` or `/plugin uninstall code-theory@theory-skills`.
+They then show as installed under `/plugin`. Claude can load them on its own during design or code work, but for a quick question it often answers without them. Name the skill to be sure. To remove one, run `/plugin uninstall design-theory@theory-skills` or `/plugin uninstall code-theory@theory-skills`.
 
-Both plugins are Markdown and JSON files only, with no scripts and no hooks. Claude follows them as instructions, so you can read every line before you install.
+All three plugins are Markdown and JSON files only, with no scripts and no hooks. Claude follows them as instructions, so you can read every line before you install.
 
 ## Other install routes
 
@@ -47,11 +56,16 @@ npx skills add https://gitlab.com/theory-skills/theory-skills
 
 ## Try it
 
+- "Use design-review on this screenshot. What should I fix first?"
 - "Use design-theory to review this signup form. What would stop people finishing it?"
 - "Use design-theory: is this dashboard readable at a glance? Be specific."
 - "Use code-theory: I changed the import job. Can I trust these tests?"
 
 You get findings in your own vocabulary: the consequence first ("ten options will slow every decision"), with the principle named when you want it ("Hick's Law").
+
+## design-review or design-theory
+
+design-review is the short entry point: one screen, three questions (can they do it, can they see it, can everyone use it), and a list of fixes. design-theory is the full version, for the reasoning behind a decision and for everything beyond one screen.
 
 ## What design-theory covers
 
@@ -91,7 +105,7 @@ Design here is the whole system, not its surface: intents and specs, architectur
 
 Every finding needs evidence from the code, a test run or a tool's output. A claim without evidence counts as a fail, not a pass.
 
-Both free skills are the theory and the way of applying it; they contain no scoring or measurement system.
+The free skills are the theory and the way of applying it; they contain no scoring or measurement system.
 
 ## design gate pro (paid)
 
@@ -104,17 +118,12 @@ The free skills never score anything. design gate pro is a separate Claude Code 
 
 Needs Node 18+ and git. The scored gates also need Chrome, Node 20+ and Python 3.11+. The WCAG floor is MIT; the scored gates are under a subscriber licence.
 
-It is a monthly subscription with a 14-day free trial, sold through Polar:
+It is not on sale yet, because the payment account is not open. The planned price is a monthly subscription with a 14-day free trial: EUR 9 or USD 9 per developer, or EUR 19 or USD 19 per repository.
 
-- [Per developer](https://buy.polar.sh/polar_cl_pHHOQNaAcCxFzjTgeG2u0kgQlUOZbc8GIxMpU1EZHTG): EUR 9 or USD 9 a month.
-- [Per repository](https://buy.polar.sh/polar_cl_1EnpRVxPo4JtcQrS1uu1roxBMo8664dIAtFPP12uWZV): EUR 19 or USD 19 a month. One subscription, one repository's pull-request gate, any contributor.
-
-At checkout you connect your GitHub account, and GitHub invites it to the private repository, whose README has the install steps. Cancel with one click in the Polar customer portal at any time. Repository access ends with the paid period; versions you already have stay usable under the subscriber licence.
-
-The two skills above stay free.
+The three skills above stay free.
 
 ## Licence
 
 CC BY 4.0: use, share and adapt it, with attribution to Jukka Yrjönen. See `LICENSE`.
 
-Both skills are free to use and adapt. Payment is optional, and [Ko-fi](https://ko-fi.com/juukk) is where it goes.
+All three skills are free to use and adapt. Payment is optional, and [Ko-fi](https://ko-fi.com/juukk) is where it goes. A [zip of design-theory and code-theory](https://ko-fi.com/s/73eabd4f92) is for sale there: the same two skills as here, in one download.

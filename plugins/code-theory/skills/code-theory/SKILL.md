@@ -1,6 +1,6 @@
 ---
 name: code-theory
-description: Judge code quality and safety against named computer-science principles (testing, reliability, simplicity, maintainability, privacy, security, architecture, design for the context of use) with an evidence-or-FAIL rule and plain-language consequences. Activate when code is planned, built, changed, reviewed, or declared done, and when deciding whether tests can be trusted. Companion of design-theory; code, infra and architecture are designed too, so load both when planning a change, and always when it touches rendered UI.
+description: Code review and quality gate against named computer-science principles (testing, reliability, simplicity, maintainability, privacy, security, architecture, design for the context of use) with an evidence-or-FAIL rule and plain-language consequences. Activate when code is planned, built, changed, reviewed, or declared done, and when deciding whether tests can be trusted. Companion of design-theory; code, infra and architecture are designed too, so load both when planning a change, and always when it touches rendered UI.
 ---
 
 # Code Theory

@@ -32,7 +32,7 @@ Explore the problem space as broadly as possible before narrowing. Research user
 
 Activities: user research, field observation, interviews, desk research, stakeholder mapping, analogous domain exploration.
 
-Failure mode: skipping this phase because "we already know the problem." Teams that skip discovery solve the problem they assumed they had, which is often a symptom of the real problem.
+Failure mode: skipping this phase because "we already know the problem." Teams that skip discovery solve the problem they assumed they had, which is often a symptom of the real problem. The scored version, with its inputs, problem-first rule, gate and checks, is in § Discover in full below.
 
 **Define (converge)**
 Synthesize what was discovered. Converge on the right problem to solve — not all the problems, not the most obvious problem, but the one whose solution creates the most value. Output: a design brief, a point of view, a how-might-we question, a validated problem statement.
@@ -61,6 +61,100 @@ Failure mode: treating the first tested solution as validated. A single round of
 Every phase of the Double Diamond contains its own smaller diamond. A discovery research project has its own discover/define/develop/deliver cycle. A single design decision — "which of these three navigation patterns?" — has its own micro-cycle: explore options, define criteria, develop candidates, test and decide.
 
 Recognizing which phase you're in, at which scale, is the primary practical use of the Double Diamond.
+
+---
+
+## Discover in full (scored)
+
+Discover is the stage teams skip most often, and the one they most often fake: a session "already knows the problem", writes down a solution and calls that Define. The rules below give Discover an output that can be checked, whether a person did the work or an agent did it unattended.
+
+**A gate sits between Discover and Build**, the same way one sits between Build and Deliver. Discover can run unattended. Building on its result waits for a human yes.
+
+An **intent** is the project's written statement of its goal and its evidence. Any file the audit is pointed at counts: a brief, an issue or a spec.
+
+### Inputs, ranked by how far they can be trusted
+1. **Observed behaviour:** logs, metrics, analytics, error reports, support mail, the product used in its real context.
+2. **What users say unprompted:** reviews, issues, forum threads, free-text survey answers. Quote them, count the repeats, note the date.
+3. **Desk research:** competitors, documentation, papers, analogous domains.
+4. **Recall and assumption:** a hypothesis to test, never evidence.
+
+Each evidence line carries:
+- its date;
+- its source (a path, URL, query or log line);
+- what it shows.
+
+Evidence read before the latest change to the thing it describes is stale. Re-read it.
+
+### Problem-first for anything new
+A new product or initiative starts from a documented, unresolved problem. It does not start from a channel, a format or a capability we happen to have. The entry bar, the test a new idea must pass first, is that the problem is:
+- quoted from the people who have it;
+- repeated, by at least 3 different authors in separate posts or threads;
+- recent, within the last 12 months;
+- unsolved: none of the alternatives you searched for is rated 4.3 or higher out of 5 in its store or site and claims to fix it. List the alternatives you searched.
+
+Research into channels and formats comes afterwards, and it answers only where the fix would live and how it would bill. Look first in niches next to existing assets: a smaller problem that can be fixed well beats a bigger one that can't be reached.
+
+### State the problem, not a solution
+Write it as a job (research.md § Jobs-to-be-Done, with who, today and cost added):
+
+> When [situation], [who] wants to [motivation], so they can [outcome]. Today [what happens instead], which costs [cost].
+
+**Test:** if the outcome or the "today" part names a feature, a screen or a technology we would build, it is a solution in disguise. The situation may name the context, for example "on the phone at night". Rewrite it until several different solutions could answer it.
+
+**Test:** the problem has happened. At least one evidence line shows a case of it: a log or record row, or a dated report of it occurring. Reading code and concluding it *could* happen is a hypothesis, and so is a person saying what *would have* happened; both go back to Discover to find a case, or to check the path the problem needs really exists. (2026-10-31: a judged-PASS proposal fixed a filter that inbound mail never passes through.)
+
+### Diverge before converging
+Before picking, list at least two options plus "do nothing". Compare all of them on the same criteria:
+- the effect on the metric;
+- cost;
+- risk;
+- reversibility;
+- what each option rules out.
+
+"Do nothing" is a real option with a real cost. If it wins, the intent closes. This rule fails when any option leaves a criterion blank, or when an option is dismissed in under one sentence.
+
+These options are a cheap triage: go, no-go or do nothing. The full search for solutions stays in Develop.
+
+### The hand-off to Define
+Discover ends when the intent holds all of these:
+- the evidence lines;
+- the problem statement;
+- a context map (research.md § Context map);
+- the compared options;
+- a metric with a target, each with its source, the baseline (the value today, or "none yet, new") and the date it was read.
+
+Define then converges on one problem and one option to build, and writes the spec. An agent may draft all of it, but only a human yes moves the work to Build.
+
+### Scored checks
+These are judged on the intent or spec, with the evidence cited. They are N/A when the audit is pointed at no intent, or when it reads a screenshot only:
+
+| Check | Passes when |
+|---|---|
+| DISC-EVIDENCE | At least 3 dated, sourced evidence lines, drawn from at least 2 of the input kinds above. Recall on its own fails |
+| DISC-PROBLEM | The problem is stated as a situation and its cost, with no solution named in the outcome or the "today" part, and at least one evidence line shows it happening |
+| DISC-DIVERGE | At least 2 options plus "do nothing" are compared on the same criteria before one is picked |
+| DISC-PAIN | New products and initiatives only: the problem meets the entry bar above |
+| DEF-METRIC | The metric and target name their source and the baseline (or "none yet, new"), with the date it was read |
+| CTX-MAP | The context map rule, which applies here too |
+
+**Example of a FAIL.** "Problem: the app needs a dark mode." That is a solution, it has no evidence and it compares nothing.
+
+**Example of a PASS** (an existing product, so DISC-PAIN is N/A):
+
+- **Problem:** "When people check the app in bed, they want to read it without waking themselves up, so they fall back to sleep. Today the screen is full-brightness white, which costs them sleep and costs us 1-star reviews."
+- **Evidence:**
+  - 2026-03-02, store reviews: 7 reviews in the last 6 months say it "blinds" them (each one quoted and dated).
+  - 2026-03-02, analytics: 40 % of sessions start between 23:00 and 06:00.
+  - 2026-03-03, desk research: the two closest competitors both switch to a dim red palette at night.
+- **Options:**
+
+  | Option | Metric effect | Cost | Risk | Reversible | Rules out |
+  |---|---|---|---|---|---|
+  | A night palette that follows the clock | large: every night session | 3 days | wrong hours for shift workers | yes | nothing |
+  | A dimmer setting | small: only people who find it | 1 day | most people never find it | yes | nothing |
+  | Do nothing | none | 0 | the reviews keep coming | yes | nothing |
+
+- **Metric:** the share of night sessions that end within 2 minutes. Target 70 %. Source: analytics. Baseline 45 %, read in March.
 
 ---
 
@@ -175,6 +269,7 @@ Families that need a row:
 - the spacing unit and rhythm;
 - radius and line weight;
 - motion duration and easing;
+- imagery, when the surface shows photographs or illustrations: subject, distance, light, colour and the policy on faces and people. Photographs carry a brand as strongly as type does, and a stock photo picked at the surface undoes the table;
 - copy tone.
 
 A value with no row was picked at the surface. It was chosen because it looked right, so nothing can say when it is wrong.

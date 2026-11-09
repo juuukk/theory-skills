@@ -184,3 +184,4 @@ The effort a user spends building mental models and schemas — actually learnin
 - Alarm fatigue: alerts that fire often or falsely are habituated and ignored. Each false alert lowers trust in the true ones.
 - Interruptions cost resumption time, and people forget their goal (Altmann & Trafton 2002). Show where the user was.
 - Audit: is every alert rare, specific and actionable? Can the user pick up where they were after an interruption?
+- Messages judged as a set: a system that sends many messages is judged on the whole week as it arrives, not one message at a time. Each can pass alone while the pile fails. Read a real week together: can the reader say what is needed from them and what is being done? (Found 2026-11-02: every mail passed its own judge, seven arrived by 11:00, and three "needs you" lines were false.)

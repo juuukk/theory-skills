@@ -1,6 +1,6 @@
 ---
 name: design-theory
-description: Apply established design theory (16 framework clusters — Gestalt, Nielsen, Norman, Laws of UX, WCAG, Tufte, motion, brand, behavioral, and more) as the rationale and audit lens for any design-adjacent decision. Activate whenever design decisions are being made or evaluated — UI, CSS, copy, IA, components, animation, dashboards, brand, audits, planning, and equally intents, specs, architecture, code structure, infra, data flow, monitors and messages (design is the whole system, not its surface) — including implementation work, not just explicit design reviews. Execution-focused skills (dataviz, frontend-design, or similar) handle the how; this supplies the why, and tells you to load them alongside it.
+description: Design review and UI critique against established design theory (16 framework clusters — Gestalt, Nielsen, Norman, Laws of UX, WCAG, Tufte, motion, brand, behavioral, and more) as the rationale and audit lens for any design-adjacent decision. Activate whenever design decisions are being made or evaluated — UI, CSS, copy, IA, components, animation, dashboards, brand, audits, planning, and equally intents, specs, architecture, code structure, infra, data flow, monitors and messages (design is the whole system, not its surface) — including implementation work, not just explicit design reviews. Execution-focused skills (dataviz, frontend-design, or similar) handle the how; this supplies the why, and tells you to load them alongside it.
 ---
 
 # Design Theory
@@ -40,7 +40,7 @@ A context map is a scored check (CTX-MAP, CTX-COVERAGE): an audit with no map, o
 
 **Explicit audits:** Structure output by framework — findings, priority (HIGH / MED / LOW), recommendations. Read the relevant reference file before responding.
 
-**Pass/fail questions** ("is this accessible?", "is it done?"): answer framework by framework with evidence from the real artifact: what the rendered page, the screenshot, the copy, the code or the running system actually shows. A principle with no evidence either way is not a pass; say it was not checked, or check it.
+**Pass/fail questions** ("is this accessible?", "is it done?"): answer framework by framework with evidence from the real artifact: what the rendered page, the screenshot, the copy, the code or the running system actually shows. A principle with no evidence either way is not a pass; say it was not checked, or check it. A profile with `peers:` (a product that sits on a shelf next to others, such as a marketplace template) also scores the strict `shelf` cluster (spec §11): media share, hierarchy, rhythm, length, colour and distinctness against a frozen peer set (`scripts/peers.mjs --check URL`). Peers set a floor under the principles, never the bar. Layout is measured, not asserted (spec §13): a full-bleed painted field keeps the section gap around its words and an inset panel the panel padding, rules sit only between items, labels start at the reading-direction start with their arrow a space away; every floor comes from the system's tokens, never from the value under test.
 
 **Planning / brainstorming / writing an intent or spec:** Use process frameworks to locate the current phase. Then run the other clusters over the planned system as a whole: write the context map, the brand core, derivation table and system map (Brand foundation, below) for anything with a surface or a voice, the states and how each ends, every failure branch and who acts on it, the messages, and the values, into the intent or spec as decisions. A contradiction found here costs a sentence; found in the build audit it costs a patch.
 
@@ -203,6 +203,7 @@ Use when: planning, scoping, locating the current phase
 **Double Diamond + Design Sprint + Brand Sprint** — the same fractal pattern at different scales: diverge → converge → validate, repeating.
 
 - **Double Diamond:** Discover → Define → Develop → Deliver. Key question: have we converged too early?
+  - Discover is scored (`references/process.md § Discover in full`): DISC-EVIDENCE, DISC-PROBLEM, DISC-DIVERGE, DISC-PAIN for anything new, DEF-METRIC. Discover can run unattended. A human yes gates Build, as it gates Deliver.
 - **Design Sprint:** Map → Sketch → Decide → Prototype → Test. Compressed; can run at any scale.
 - **Brand Sprint:** surfaces brand foundations before any derived work. Unanchored brand = inconsistent execution downstream.
 

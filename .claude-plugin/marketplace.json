@@ -10,7 +10,7 @@
     {
       "name": "design-theory",
       "source": "./plugins/design-theory",
-      "description": "16 clusters of design theory as the rationale and review lens for UI, copy, layout, charts, motion and brand, and equally for specs, architecture, code and infra, explained as plain-language consequences.",
+      "description": "Design review and UI critique: 16 clusters of design theory as the rationale and review lens for UI, copy, layout, charts, motion and brand, and equally for specs, architecture, code and infra, explained as plain-language consequences.",
       "repository": "https://github.com/juuukk/theory-skills",
       "category": "design",
       "tags": [
@@ -33,7 +33,7 @@
     {
       "name": "code-theory",
       "source": "./plugins/code-theory",
-      "description": "Reviews code against eight areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, design for the context of use). Every finding needs evidence, and each is explained as a plain-language consequence.",
+      "description": "Code review and quality gate: reviews code against eight areas of computer-science principle (tests, reliability, simplicity, maintainability, privacy, security, architecture, design for the context of use). Every finding needs evidence, and each is explained as a plain-language consequence.",
       "repository": "https://github.com/juuukk/theory-skills",
       "category": "code-review",
       "tags": [
@@ -51,6 +51,27 @@
         "security",
         "privacy",
         "architecture"
+      ]
+    },
+    {
+      "name": "design-review",
+      "source": "./plugins/design-review",
+      "description": "Design review of one screen, page, screenshot, URL or UI diff: at most seven findings, worst first, each saying where it is, why it costs the user and the fix.",
+      "repository": "https://github.com/juuukk/theory-skills",
+      "category": "design",
+      "tags": [
+        "design-review",
+        "ui-critique",
+        "ux-review",
+        "usability",
+        "accessibility"
+      ],
+      "keywords": [
+        "design-review",
+        "ui-critique",
+        "ux-review",
+        "usability",
+        "accessibility"
       ]
     }
   ]
