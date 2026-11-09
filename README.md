@@ -42,7 +42,7 @@ claude plugin install design-theory --marketplace https://gitlab.com/theory-skil
 claude plugin install code-theory --marketplace https://gitlab.com/theory-skills/theory-skills.git
 ```
 
-They then show as installed under `/plugin`. Claude can load them on its own during design or code work, but for a quick question it often answers without them. Name the skill to be sure. To remove one, run `/plugin uninstall design-theory@theory-skills` or `/plugin uninstall code-theory@theory-skills`.
+They then show as installed under `/plugin`. Claude can load them on its own during design or code work, but for a quick question it often answers without them. Name the skill to be sure. To remove one, run `/plugin uninstall design-review@theory-skills`, with `design-theory` or `code-theory` in place of `design-review` for the others.
 
 All three plugins are Markdown and JSON files only, with no scripts and no hooks. Claude follows them as instructions, so you can read every line before you install.
 
