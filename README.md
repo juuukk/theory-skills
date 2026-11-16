@@ -118,7 +118,7 @@ The free skills never score anything. design gate pro is a separate Claude Code 
 
 Needs Node 18+ and git. The scored gates also need Chrome, Node 20+ and Python 3.11+. The WCAG floor is MIT; the scored gates are under a subscriber licence.
 
-It is not on sale yet, because the payment account is not open. The planned price is a monthly subscription with a 14-day free trial: EUR 9 or USD 9 per developer, or EUR 19 or USD 19 per repository.
+It is not on sale yet, because the payment account is not open. The planned price is a monthly subscription with a 14-day free trial: EUR 9 or USD 9 per developer.
 
 The three skills above stay free.
 
