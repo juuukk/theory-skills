@@ -118,7 +118,7 @@ The free skills never score anything. design gate pro is a separate Claude Code 
 
 Needs Node 18+ and git. The scored gates also need Chrome, Node 20+ and Python 3.11+. The WCAG floor is MIT; the scored gates are under a subscriber licence.
 
-It is not on sale yet, because the payment account is not open. The planned price is a monthly subscription with a 14-day free trial: EUR 9 or USD 9 per developer.
+It is a monthly subscription, EUR 9 or USD 9 per developer, with a 14-day free trial. Whether it is on sale today, and the link to subscribe, is in the [verify-ledger README](https://github.com/theory-skills/verify-ledger#related-design-gate-pro).
 
 The three skills above stay free.
 
